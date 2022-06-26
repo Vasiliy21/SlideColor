@@ -21,6 +21,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         RGBView.layer.cornerRadius = 10
+
+        setupValues()
+    }
+
+    @IBAction func slidersAction() {
+        redValue.text = "\(round(redSlider.value * 100)/100)"
+        greenValue.text = "\(round(greenSlider.value * 100)/100)"
+        blueValue.text = "\(round(blueSlider.value * 100)/100)"
+        RGBView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
 
     // MARK: - Private Methods
