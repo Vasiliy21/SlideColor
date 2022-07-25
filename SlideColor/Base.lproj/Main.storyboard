@@ -28,7 +28,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2rJ-rj-oHD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255.07246376811597" y="-4.0178571428571423"/>
+            <point key="canvasLocation" x="264" y="-4"/>
         </scene>
         <!--Set Up View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -101,52 +101,61 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4HI-p1-ef0">
-                                        <rect key="frame" x="124.5" y="33" width="205.5" height="120"/>
+                                        <rect key="frame" x="124.5" y="33" width="196.5" height="120"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="A9w-ms-5wN">
-                                                <rect key="frame" x="-2" y="0.0" width="209.5" height="31"/>
+                                                <rect key="frame" x="-2" y="0.0" width="200.5" height="31"/>
                                                 <color key="tintColor" red="1" green="0.00090441950670000005" blue="0.1484035437" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <connections>
-                                                    <action selector="slidersAction" destination="BYZ-38-t0r" eventType="valueChanged" id="AeU-wi-xui"/>
+                                                    <action selector="slidersAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="RsM-mu-yv9"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="L7j-xa-ult">
-                                                <rect key="frame" x="-2" y="45" width="209.5" height="31"/>
+                                                <rect key="frame" x="-2" y="45" width="200.5" height="31"/>
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                 <connections>
-                                                    <action selector="slidersAction" destination="BYZ-38-t0r" eventType="valueChanged" id="FLj-8Z-tQy"/>
+                                                    <action selector="slidersAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="jUM-zr-Hse"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yY7-Pg-tO8">
-                                                <rect key="frame" x="-2" y="90" width="209.5" height="31"/>
+                                                <rect key="frame" x="-2" y="90" width="200.5" height="31"/>
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <connections>
-                                                    <action selector="slidersAction" destination="BYZ-38-t0r" eventType="valueChanged" id="khh-WS-6Hs"/>
+                                                    <action selector="slidersAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="cRV-iK-71w"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GRK-Id-zkn">
-                                        <rect key="frame" x="346" y="34" width="36" height="118"/>
+                                        <rect key="frame" x="337" y="34" width="45" height="118"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NTc-Mf-cPj">
-                                                <rect key="frame" x="0.0" y="0.0" width="36" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="kDy-wG-MKf"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pzM-Rg-Em5">
-                                                <rect key="frame" x="0.0" y="42" width="36" height="34"/>
+                                                <rect key="frame" x="0.0" y="42" width="45" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="kly-IL-hMz"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="huG-Do-uWZ">
-                                                <rect key="frame" x="0.0" y="84" width="36" height="34"/>
+                                                <rect key="frame" x="0.0" y="84" width="45" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="OVp-Gy-2Ie"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="36" id="Rns-6N-VQc"/>
+                                            <constraint firstAttribute="width" constant="45" id="Rns-6N-VQc"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -157,12 +166,12 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <segue destination="I0s-EW-AyM" kind="unwind" unwindAction="unwindFor:" id="aTm-BF-bk3"/>
+                                    <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLJ-Ka-ltX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137254901963" blue="1" alpha="0.56673260124362246" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.50956084833910209" green="0.49887649018620861" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nfc-yS-cvH" secondAttribute="bottom" constant="78" id="3df-Co-C38"/>
                             <constraint firstItem="Nfc-yS-cvH" firstAttribute="top" relation="lessThanOrEqual" secondItem="bgS-Ra-nDU" secondAttribute="bottom" constant="262" id="8Jm-va-XhI"/>
@@ -179,18 +188,20 @@
                     <navigationItem key="navigationItem" id="0RN-CZ-Qe7"/>
                     <connections>
                         <outlet property="RGBView" destination="d7s-Nf-hvA" id="kQk-6N-tBN"/>
-                        <outlet property="blueSlider" destination="yY7-Pg-tO8" id="Qr9-4P-hgG"/>
+                        <outlet property="blueSlider" destination="yY7-Pg-tO8" id="hms-Vh-oja"/>
+                        <outlet property="blueTextField" destination="huG-Do-uWZ" id="BBJ-mS-4dr"/>
                         <outlet property="blueValue" destination="IGa-o9-WoV" id="kg1-eF-cYA"/>
-                        <outlet property="greenSlider" destination="L7j-xa-ult" id="00a-SE-qUE"/>
+                        <outlet property="greenSlider" destination="L7j-xa-ult" id="3y1-G1-MMt"/>
+                        <outlet property="greenTextField" destination="pzM-Rg-Em5" id="bMp-QA-HKM"/>
                         <outlet property="greenValue" destination="fxe-UR-4ps" id="8yS-Cw-s3T"/>
-                        <outlet property="redSlider" destination="A9w-ms-5wN" id="07T-ca-Mx2"/>
+                        <outlet property="redSlider" destination="A9w-ms-5wN" id="1rZ-Jd-4E3"/>
+                        <outlet property="redTextField" destination="NTc-Mf-cPj" id="oZ2-L2-sVE"/>
                         <outlet property="redValue" destination="q96-R3-ejC" id="8ud-Nk-O7h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="I0s-EW-AyM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1144.9275362318842" y="12.723214285714285"/>
+            <point key="canvasLocation" x="1145" y="-4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lWo-a8-NL8">

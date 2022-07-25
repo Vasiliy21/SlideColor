@@ -7,26 +7,22 @@
 
 import UIKit
 
+protocol SetUpViewControllerDelegate {
+    func setColor(_ color: UIColor)
+}
+
 class MainViewController: UIViewController {
-
-    private var RGB = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = RGB
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let setUpVC = segue.destination as? SetUpViewController else {return}
-        setUpVC.RGB = RGB
+        setUpVC.delegate = self
+        setUpVC.viewColor = view.backgroundColor
     }
-
-    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
-        guard let setUpVC = unwindSegue.source as? SetUpViewController else {return}
-        view.backgroundColor = setUpVC.RGB
-        RGB = setUpVC.RGB
-
-
-    }
-
 }
+
+// MARK: - ColorDelegate
+extension MainViewController: SetUpViewControllerDelegate {
+    func setColor(_ color: UIColor) {
+        view.backgroundColor = color
+    }
+}
+
